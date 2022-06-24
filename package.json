@@ -1,0 +1,15 @@
+{
+  "name": "telega",
+  "version": "1.0.1",
+  "description": "xyeta nesusvetnaia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "loxxx",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "0.57.0"
+  }
+}
