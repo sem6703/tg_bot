@@ -59,7 +59,7 @@ bot.on('callback_query', (query) => {
         img = '603291.jpg'//
     }
 	
-	if (query.data === 'DL') { //
+    if (query.data === 'DL') { //
         img = 'dl.jpg'//
     }	
 
