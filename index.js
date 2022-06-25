@@ -18,7 +18,19 @@ const keybo = [
           text: 'Хочу песика',
           callback_data: 'morePes'
         }
-    ]
+    ],
+	[
+        {
+          text: 'Хочу DL',
+          callback_data: 'DL'
+        }
+    ],
+    [
+        {
+          text: 'Что-то непонятное',
+          callback_data: 'omg'
+        }
+    ]	
   ];
 
 // обработчик события присылания нам любого сообщения
@@ -37,15 +49,19 @@ bot.on('message', (msg) => {
 bot.on('callback_query', (query) => {
     const chatId = query.message.chat.id;
 
-    let img = '';
+    let img = '';//запрос картинки
 
     if (query.data === 'moreKeks') { // если кот
         img = 'keks.jpg';
     }
 
     if (query.data === 'morePes') { // если пёс
-        img = '603291.jpg'//'pes.png';
+        img = '603291.jpg'//
     }
+	
+	if (query.data === 'DL') { //
+        img = 'dl.jpg'//
+    }	
 
     if (img) {
         bot.sendPhoto(chatId, img, { // прикрутим клаву
